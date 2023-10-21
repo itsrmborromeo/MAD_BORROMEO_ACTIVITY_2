@@ -1,5 +1,5 @@
-# MAD_BORROMEO_ACTIVITY_2
-Create a mobile application of a calculator. The calculator app must have the following functions: 💻
+# MAD_BORROMEO_ACTIVITY_2 💻
+Create a mobile application of a calculator. The calculator app must have the following functions: 
 
 Addition
 Subtraction
