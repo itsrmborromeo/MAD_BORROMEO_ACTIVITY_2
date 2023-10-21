@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">MAD_BORROMEO_ACT2</string>
+    <string name="addition">+</string>
+    <string name="all_clear">AC</string>
+    <string name="modulo">%</string>
+    <string name="clear">DEL</string>
+    <string name="division">÷</string>
+    <string name="subtraction">-</string>
+    <string name="multiplication">x</string>
+    <string name="negative">(-)</string>
+    <string name="SqRoot">√</string>
+    <string name="power_of_n">x^n</string>
+    <string name="square">x²</string>
+    <string name="nine">9</string>
+    <string name="eight">8</string>
+    <string name="seven">7</string>
+    <string name="six">6</string>
+    <string name="five">5</string>
+    <string name="four">4</string>
+    <string name="three">3</string>
+    <string name="two">2</string>
+    <string name="one">1</string>
+    <string name="zero">0</string>
+    <string name="main_text">""</string>
+    <string name="decimalpoint">.</string>
+    <string name="equals">=</string>
+    <string name="exponent">^</string>
+    <string name="reciprocal">1/x</string>
+    <string name="root_of_n">√n</string>
+    <string name="doublezero">00</string>
+    <string name="log">LOG</string>
+    <string name="par1">(</string>
+    <string name="par2">)</string>
+    <string name="nthrooths">Nth Roots of a number</string>
+    <string name="rootfrag">Root</string>
+    <string name="numberroots">Number</string>
+    <string name="nth_root">nth Root</string>
+    <string name="calculateroot">Calculate</string>
+    <string name="ansroot">""</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

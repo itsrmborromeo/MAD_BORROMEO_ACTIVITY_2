@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#05FFFFFF"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/secondary"
+            android:layout_width="match_parent"
+            android:layout_height="102dp"
+            android:background="#181B1E"
+            android:fontFamily="@font/poppinsregular"
+            android:padding="10dp"
+            android:text="@string/main_text"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:id="@+id/primary"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:background="#181B1E"
+            android:fontFamily="@font/poppinsregular"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="19dp"
+            android:text="@string/main_text"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/white"
+            android:textSize="41sp" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="515dp"
+                android:background="#252A30"
+                android:orientation="vertical"
+                tools:ignore="UselessLeaf">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginEnd="5dp">
+
+                    <Button
+                        android:id="@+id/all_clear"
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:padding="6dp"
+                        android:text="@string/all_clear"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+
+                    <Button
+                        android:id="@+id/delete"
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/clear"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/square_root"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/SqRoot"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/power_of_n"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/power_of_n"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+
+                    <Button
+                        android:id="@+id/exponent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/exponent"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/open_parenthesis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/par1"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/close_parenthesis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/par2"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,VisualLintButtonSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/log"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/log"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/negative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/negative"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+
+                    <Button
+                        android:id="@+id/reciprocal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/reciprocal"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/square"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/square"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/root_of_n"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/root_of_n"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textcolor"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/num7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/seven"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/num8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/eight"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+
+                    <Button
+                        android:id="@+id/num9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/nine"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/multiply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/multiplication"
+                        android:textAllCaps="false"
+                        android:textColor="#26F3D7"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/divide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/division"
+                        android:textAllCaps="false"
+                        android:textColor="#26F3D7"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/num4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/four"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/num5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/five"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+
+                    <Button
+                        android:id="@+id/num6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/six"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/modulo"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/modulo"
+                        android:textAllCaps="false"
+                        android:textColor="#26F3D7"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize"/>
+
+                    <Button
+                        android:id="@+id/subtract"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/subtraction"
+                        android:textAllCaps="false"
+                        android:textColor="#26F3D7"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/num1"
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/one"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/num2"
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/two"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+
+                    <Button
+                        android:id="@+id/num3"
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/three"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/add"
+                        android:layout_width="85dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/addition"
+                        android:textAllCaps="false"
+                        android:textColor="#26F3D7"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize"
+
+                         />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:orientation="horizontal"
+                    tools:ignore="VisualLintBounds">
+
+                    <Button
+                        android:id="@+id/num0"
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/zero"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,DuplicateSpeakableTextCheck,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/dot"
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/decimalpoint"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+
+                    <Button
+                        android:id="@+id/doublezero"
+                        android:layout_width="8dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/doublezero"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                    <Button
+                        android:id="@+id/equals"
+                        android:layout_width="84dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_btn"
+                        android:fontFamily="@font/poppinsregular"
+                        android:minHeight="48dp"
+                        android:padding="6dp"
+                        android:text="@string/equals"
+                        android:textAllCaps="false"
+                        android:textColor="#26F3D7"
+                        android:textSize="17sp"
+                        tools:ignore="ButtonStyle,TouchTargetSizeCheck,VisualLintButtonSize" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
