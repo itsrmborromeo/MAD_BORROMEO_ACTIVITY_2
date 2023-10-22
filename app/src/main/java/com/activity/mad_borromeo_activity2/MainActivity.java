@@ -3,6 +3,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Boolean root=false;
     Double rootnum=0.0,basenum=0.0;
     Button bt0,bt1,bt2,bt3,bt4,bt5,bt6,bt7,bt8,bt9,bt00,add,sub,multiply,divide,modulo,
-            parenthesis,parenthesis2,equal,dot,exponents,log,roots,allclear,delete,reciprocal,sqroot;
+            parenthesis,parenthesis2,equal,dot,exponents,log,roots,allclear,delete,reciprocal,sqroot,xsquare,negative,npower;
 
 
 
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         primaryscrn = findViewById(R.id.primary);
         secondaryscrn =findViewById(R.id.secondary);
-
+        negative = findViewById(R.id.negative);
         bt00 = findViewById(R.id.doublezero);
         bt0 = findViewById(R.id.num0);
         bt1=findViewById(R.id.num1);
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         multiply=findViewById(R.id.multiply);
         divide=findViewById(R.id.divide);
         modulo=findViewById(R.id.modulo);
-
+        xsquare = findViewById(R.id.xsquare);
         exponents=findViewById(R.id.exponent);
         log=findViewById(R.id.log);
         roots=findViewById(R.id.root_of_n);
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         parenthesis2=findViewById(R.id.close_parenthesis);
         equal=findViewById(R.id.equals);
         dot=findViewById(R.id.dot);
+        npower=findViewById(R.id.power_of_n);
 
 
         bt00.setOnClickListener(view -> primaryscrn.setText(primaryscrn.getText()+"00"));
@@ -76,44 +79,106 @@ public class MainActivity extends AppCompatActivity {
         parenthesis.setOnClickListener(view -> primaryscrn.setText(primaryscrn.getText()+"("));
         parenthesis2.setOnClickListener(view -> primaryscrn.setText(primaryscrn.getText()+")"));
         log.setOnClickListener(view -> primaryscrn.setText(primaryscrn.getText()+"log"));
-        reciprocal.setOnClickListener(view -> primaryscrn.setText(primaryscrn.getText()+"^"+"(-1)"));
         dot.setOnClickListener(view -> primaryscrn.setText(primaryscrn.getText()+"."));
 
+
+        reciprocal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String cont = primaryscrn.getText().toString();
+                    primaryscrn.setText(primaryscrn.getText()+"^"+"(-1)");
+                }
+        });
+
+        npower.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                primaryscrn.setText(primaryscrn.getText()+"^");
+            }
+        });
         roots.setOnClickListener(view -> {
-            root=true;
-            String val = primaryscrn.getText().toString();
-            rootnum = (Double.parseDouble(val));
-            primaryscrn.setText(primaryscrn.getText()+"√");
+            String cont = primaryscrn.getText().toString();
+            if(!cont.isEmpty()) {
+                root = true;
+                rootnum = (Double.parseDouble(cont));
+                primaryscrn.setText(primaryscrn.getText() + "√");
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Invalid input.", Toast.LENGTH_SHORT).show();
+            }
         });
 
         sqroot.setOnClickListener(view -> {
-            String num = primaryscrn.getText().toString();
-            double rnum = Math.round(Math.sqrt(Double.parseDouble(num)));
-            secondaryscrn.setText(String.valueOf(rnum));
+            String cont = primaryscrn.getText().toString();
+            if(!cont.isEmpty()) {
+                String a = primaryscrn.getText().toString();
+                double r = Math.sqrt(Double.parseDouble(a));
+                secondaryscrn.setText(String.valueOf(r));
+            }else{
+                Toast.makeText(getApplicationContext(), "Invalid input. (Format: number√)", Toast.LENGTH_SHORT).show();
+            }
         });
 
         delete.setOnClickListener(view -> {
-            String val= primaryscrn.getText().toString();
-            val=val.substring(0,val.length()-1);
-            primaryscrn.setText(val);
+            String cont = primaryscrn.getText().toString();
+            if(!cont.isEmpty()) {
+                cont = cont.substring(0, cont.length() - 1);
+                primaryscrn.setText(cont);
+                secondaryscrn.setText(cont);
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Invalid input.", Toast.LENGTH_SHORT).show();
+            }
         });
         allclear.setOnClickListener(view -> {
-            primaryscrn.setText("");
-            secondaryscrn.setText("");
+            String cont = primaryscrn.getText().toString();
+            if(!cont.isEmpty()) {
+                primaryscrn.setText("");
+                secondaryscrn.setText("");
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "Please input a number.", Toast.LENGTH_SHORT).show();
+            }
         });
 
         equal.setOnClickListener(view -> {
-            if(root){
-                num = primaryscrn.getText().toString();
-                String temporary = findnum(num);
-                basenum=(Double.parseDouble(temporary));
-                double result=Math.pow(basenum,1.0/rootnum);
-                secondaryscrn.setText(String.valueOf(result));
-            }else {
-                String val =primaryscrn.getText().toString();
-                String replacedstr = val.replace('÷','/');
-                double result = eval(replacedstr);
-                secondaryscrn.setText(String.valueOf(result));
+            String cont = primaryscrn.getText().toString();
+             if(cont.isEmpty()){
+                 Toast.makeText(getApplicationContext(), "Invalid input", Toast.LENGTH_SHORT).show();
+            }
+            else if(root) {
+                 num = primaryscrn.getText().toString();
+                 String temporary = findnum(num);
+                 basenum = (Double.parseDouble(temporary));
+                 double result = Math.pow(basenum, 1.0 / rootnum);
+                 secondaryscrn.setText(String.valueOf(result));
+             }
+            else{
+                 String replacedstr = cont.replace('÷','/');
+                 double result = eval(replacedstr);
+                 secondaryscrn.setText(String.valueOf(result));
+            }
+        });
+
+        xsquare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String cont = primaryscrn.getText().toString();
+                if(!cont.isEmpty()) {
+                    primaryscrn.setText(primaryscrn.getText() + "^" + (2));
+                }else{
+                    Toast.makeText(getApplicationContext(), "Invalid input.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        negative.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String cont = primaryscrn.getText().toString();
+                if (!cont.equals("-")) {
+                    primaryscrn.setText(primaryscrn.getText() + "-");
+                }
             }
         });
     }
